@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Expensee Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Seguimiento de gastos</h1>
+
+    <header>
+        <div>
+            <h5>Total</h5>
+            <span id="balance">0.00</span>
+        </div>
+
+        <div>
+            <h5>Ingresos</h5>
+            <span id="income">0.00</span>
+        </div>
+
+        <div>
+            <h5>Gastos</h5>
+            <span id="expense">0.00</span>
+        </div>
+
+    </header>
+
+    <section>
+        <h3>Transaccion</h3>
+        <ul id="transactionList"></ul>
+        <div id="status"></div>
+    </section>
+
+    <section>
+        <h3> añadir cambios</h3>
+
+        <form id="transactionPlus">
+
+            <div>
+                <label for="type">
+                    <input type="checkbox" name="type" id="type"/>
+                    <div class="option">
+                        <span>Gasto</span>
+                        <span>Ingreso</span>
+                    
+                    </div>
+                </label>
+            </div>
+
+            <div>
+                <label for="name">name</label>
+                <input type="text" name="name" required />
+            </div> 
+            <div>
+                <label for="amount">amount</label>
+                <input type="number" name="amount" required  value="0" min="0.01" step="0.01" required/>
+            </div> 
+            <div>
+                <label for="date">Date</label>
+                <input type="date" name="date" required />
+            </div> 
+
+            <button type="summit"> summit</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
